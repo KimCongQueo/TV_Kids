@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/height_15"
+    android:background="@drawable/bg_menu_item"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_divider_top"
+        android:layout_width="wrap_content"
+        android:layout_height="0.6dp"
+        android:background="#e1e1e1"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imv_item"
+        android:layout_width="@dimen/height_icon_menu"
+        android:layout_height="@dimen/height_icon_menu"
+        android:contentDescription="@null"
+        android:layout_margin="@dimen/height_15"
+        android:padding="5dp"
+        android:src="@drawable/ic_logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_top" />
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:text="@string/app_name"
+        android:textSize="@dimen/text_medium_15"
+        app:layout_constraintBottom_toBottomOf="@id/imv_item"
+        android:textColor="@color/text_color_grey"
+        app:layout_constraintStart_toEndOf="@id/imv_item"
+        app:layout_constraintTop_toTopOf="@id/imv_item" />
+
+</android.support.constraint.ConstraintLayout>
